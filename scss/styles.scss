@@ -1,0 +1,464 @@
+//Colors
+$color_blue: #0d6efd;
+$color_orange: #f14a16;
+$color_white: #ffffff;
+$color_black: #000000;
+
+//Fonts
+$font_0: Montserrat;
+$font_1: sans-serif;
+
+//Font_sizes
+$title_1: 2em;
+$title_2: 1.5em;
+$text_1: 1em;
+$text_2: 0.5em;
+$icon: 20px;
+
+//urls
+$url_0: url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap);
+
+$bg-url: "https://storage.googleapis.com/subtlepatterns-production/designers/subtlepatterns/uploads/triangle-mosaic.png";
+$bg-width: 50px;
+$bg-height: 50px;
+
+//Animations
+@-webkit-keyframes bg-scrolling-reverse {
+	100% {
+		background-position: $bg-width $bg-height;
+	}
+}
+
+@-moz-keyframes bg-scrolling-reverse {
+	100% {
+		background-position: $bg-width $bg-height;
+	}
+}
+
+@-o-keyframes bg-scrolling-reverse {
+	100% {
+		background-position: $bg-width $bg-height;
+	}
+}
+
+@keyframes bg-scrolling-reverse {
+	100% {
+		background-position: $bg-width $bg-height;
+	}
+}
+
+@-webkit-keyframes bg-scrolling {
+	0% {
+		background-position: $bg-width $bg-height;
+	}
+}
+
+@-moz-keyframes bg-scrolling {
+	0% {
+		background-position: $bg-width $bg-height;
+	}
+}
+
+@-o-keyframes bg-scrolling {
+	0% {
+		background-position: $bg-width $bg-height;
+	}
+}
+
+@keyframes bg-scrolling {
+	0% {
+		background-position: $bg-width $bg-height;
+	}
+}
+body {
+	//img size is 50x50
+	background: url($bg-url) repeat 0 0;
+	-webkit-animation: bg-scrolling-reverse 0.92s infinite;
+	-moz-animation: bg-scrolling-reverse 0.92s infinite;
+	-o-animation: bg-scrolling-reverse 0.92s infinite;
+	animation: bg-scrolling-reverse 0.92s infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	-o-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+//Mixins
+@mixin reset {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $font_0, $font_1;
+}
+@mixin titles {
+	color: $color_orange;
+	font-size: $title_1;
+	font-family: $font_0, $font_1;
+}
+@mixin text {
+	color: $color_blue;
+	font-size: $text_1;
+	font-family: $font_0, $font_1;
+}
+
+//All code below
+
+* {
+	@include reset;
+}
+.title {
+	@include titles;
+	display: flex;
+	justify-content: center;
+	text-align: left;
+	padding-top: 40px !important;
+	margin-left: -45px;
+}
+.info-content {
+	color: $color_blue;
+	margin-left: -40px;
+	p {
+		@include text;
+		text-align: left;
+		display: flex;
+		padding: 30px;
+		margin-left: 23px;
+	}
+}
+.main {
+	width: 80vw;
+	height: 80vh;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+
+	img {
+		width: 700px;
+		margin-right: 10px;
+		margin-left: 30px;
+	}
+}
+.downloadcv {
+	padding: 12px 22px;
+	margin-top: 12px;
+	margin-left: 50px;
+	margin-top: 40px;
+	background-color: $color_orange;
+	color: $white;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $color_bondi_blue_approx;
+		color: $white;
+		box-shadow: none;
+	}
+}
+#foot {
+	bottom: 0 !important;
+}
+//Portfolio design
+.work {
+	@include titles;
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+}
+.desc {
+	@include text;
+	text-align: left;
+	padding: 10px;
+	margin-bottom: 30px !important;
+}
+#gallery img {
+	box-shadow: 0 8px 10px -4px $black_60 !important;
+	border-radius: 10px !important;
+	margin-bottom: 20px !important;
+
+	&:hover {
+		cursor: pointer;
+		filter: opacity(0.7);
+		transform: scale(1.06);
+	}
+}
+//Form design
+.cntct {
+	@include titles;
+	text-align: center;
+	padding: 10px;
+	padding-top: 30px;
+	padding-bottom: 15px;
+	margin: 10px;
+}
+.description {
+	@include text;
+	text-align: left;
+	margin: 14px;
+}
+form {
+	margin: 30px;
+}
+#allform {
+	margin-left: 10px !important;
+	margin-bottom: 90px !important;
+
+	label {
+		color: $color_orange !important;
+	}
+}
+
+#copy {
+	list-style: none;
+	text-decoration: none;
+}
+
+//Map's
+$medias: (
+	justify-content: center,
+	align-items: center,
+	display: flex,
+	flex-direction: column,
+	width: 100%,
+);
+//Media Queries
+
+@media (max-width: 768px) {
+	.main {
+		justify-content: map-get($medias, justify-content);
+		align-items: map-get($medias, align-items);
+		display: map-get($medias, display);
+		flex-direction: map-get($medias, flex-direction);
+		width: map-get($medias, width);
+	}
+	.info-content {
+		justify-content: map-get($medias, justify-content);
+		align-items: map-get($medias, align-items);
+		display: map-get($medias, display);
+		flex-direction: map-get($medias, flex-direction);
+		width: map-get($medias, width);
+		h1 {
+			color: $color_orange !important;
+			margin-top: 20px !important;
+			margin-left: 31px;
+			text-align: center;
+			font-size: $title !important;
+			padding: 0;
+
+			p {
+				text-align: center;
+				font-size: $text !important;
+				padding: 0;
+				padding-top: 24px !important;
+				color: $color_blue !important;
+			}
+		}
+	}
+	.title {
+		padding-top: 50px !important;
+	}
+
+	.downloadcv {
+		justify-content: center !important;
+		margin: 10px;
+		background-color: $color_orange !important;
+		border-radius: 20px !important;
+
+		&:hover {
+			background-color: $color_bondi_blue_approx !important;
+			color: $white;
+			box-shadow: none;
+		}
+	}
+	//Portfolio section
+
+	.work {
+		font-size: $title;
+		text-align: center;
+		color: $color_orange !important;
+		padding: 10px;
+		margin: 10px;
+	}
+
+	.desc {
+		text-align: left;
+		font-size: $text;
+		color: $color_blue !important;
+		padding: 10px;
+		margin-bottom: 15px;
+	}
+
+	.cntct {
+		font-size: $title;
+		text-align: center;
+		color: $color_orange !important;
+		padding: 10px;
+		margin: 10px;
+		padding-top: 30px !important;
+	}
+
+	//formulario section
+
+	.formulario {
+		font-family: inherit;
+		width: 104%;
+		border-radius: 1em;
+		padding: 1em;
+		margin: auto;
+	}
+
+	#allform {
+		margin-left: 10px !important;
+
+		label {
+			color: $color_orange !important;
+		}
+	}
+
+	#copy {
+		list-style: none;
+		text-decoration: none;
+	}
+
+	.pictsd img {
+		width: auto !important;
+		height: auto !important;
+	}
+
+	.description p {
+		text-align: left;
+		font-size: $text;
+		color: $color_blue !important;
+		padding: 10px;
+		margin-bottom: 15px;
+	}
+
+	#iconst li {
+		padding-top: 90px !important;
+		font-size: $icon !important;
+		position: relative !important;
+	}
+}
+
+@media (max-width: 970px) {
+	.main {
+		justify-content: map-get($medias, justify-content);
+		align-items: map-get($medias, align-items);
+		display: map-get($medias, display);
+		flex-direction: map-get($medias, flex-direction);
+		width: map-get($medias, width);
+		height: 50%;
+	}
+
+	.info-content {
+		justify-content: map-get($medias, justify-content);
+		align-items: map-get($medias, align-items);
+		display: map-get($medias, display);
+		flex-direction: map-get($medias, flex-direction);
+		width: map-get($medias, width);
+		height: 50%;
+
+		p {
+			text-align: center;
+			font-size: $text;
+			padding: 0;
+			padding-top: 20px !important;
+			color: $color_blue !important;
+		}
+	}
+	.title {
+		padding-top: 50px !important;
+	}
+
+	.downloadcv {
+		justify-content: center !important;
+		margin: 10px;
+		background-color: $color_orange !important;
+		border-radius: 30px !important;
+
+		&:hover {
+			background-color: $color_bondi_blue_approx !important;
+			color: $white;
+			box-shadow: none;
+		}
+	}
+	.work {
+		font-size: $title;
+		text-align: center;
+		color: $color_orange !important;
+		padding: 10px;
+		margin: 10px;
+	}
+
+	.desc {
+		text-align: left;
+		font-size: $text;
+		color: $color_blue !important;
+		padding: 10px;
+		margin-bottom: 15px;
+	}
+	#gallery img {
+		box-shadow: 0 8px 10px -4px $black_60 !important;
+		border-radius: 10px !important;
+		margin-bottom: 20px !important;
+
+		&:hover {
+			cursor: pointer;
+			filter: opacity(0.7);
+			transform: scale(1.06);
+		}
+	}
+
+	//form section
+
+	.formulario {
+		font-family: inherit;
+		width: 104%;
+		border-radius: 30px !important;
+		padding: 1em;
+		margin: auto;
+	}
+
+	#allform {
+		margin-left: 10px !important;
+
+		label {
+			color: $color_orange !important;
+		}
+	}
+
+	.cntct {
+		font-size: 1.8em;
+		text-align: center;
+		color: $color_orange !important;
+		padding: 10px;
+		margin: 10px;
+		padding-top: 30px !important;
+	}
+
+	#copy {
+		list-style: none;
+		text-decoration: none;
+		color: $color_blue;
+	}
+
+	.pictsd img {
+		width: 400px !important;
+		height: 400px !important;
+	}
+
+	.description p {
+		text-align: left;
+		font-size: $text;
+		color: $color_blue !important;
+		padding: 10px;
+		margin-bottom: 15px;
+	}
+
+	#iconst li {
+		font-size: $icon !important;
+		padding-top: 40px !important;
+		position: relative !important;
+	}
+}

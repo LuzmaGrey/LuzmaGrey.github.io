@@ -11,9 +11,9 @@ $font_1: sans-serif;
 
 //Font_sizes
 $title_1: 2em;
-$title_2: 1.5em;
-$text_1: 1em;
-$text_2: 0.5em;
+$title_2: 1em;
+$text_1: .5em;
+$text_2: 1em;
 $icon: 20px;
 
 //urls
@@ -73,6 +73,7 @@ $bg-height: 50px;
 }
 body {
 	//img size is 50x50
+	overflow: hidden;
 	background: url($bg-url) repeat 0 0;
 	-webkit-animation: bg-scrolling-reverse 0.92s infinite;
 	-moz-animation: bg-scrolling-reverse 0.92s infinite;
@@ -245,7 +246,7 @@ $medias: (
 		width: map-get($medias, width);
 		h1 {
 			color: $color_orange !important;
-			margin-top: 20px !important;
+			margin-top: 40px !important;
 			margin-left: 31px;
 			text-align: center;
 			font-size: $title_1 !important;
@@ -254,8 +255,7 @@ $medias: (
 			p {
 				text-align: center;
 				font-size: $text_1 !important;
-				padding: 0;
-				padding-top: 24px !important;
+				padding-top: 40px !important;
 				color: $color_blue !important;
 			}
 		}
@@ -368,7 +368,9 @@ $medias: (
 			text-align: center;
 			font-size: $text_2;
 			padding: 0;
-			padding-top: 20px !important;
+			padding-top: 30px !important;
+			padding-bottom: 30px;
+			padding-left: 40px;
 			color: $color_blue !important;
 		}
 	}

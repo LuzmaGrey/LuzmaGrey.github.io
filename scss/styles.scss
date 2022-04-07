@@ -1,6 +1,7 @@
 //Colors
 $color_blue: #0d6efd;
 $color_orange: #f14a16;
+$color_vivorange: #ff9407;
 $color_white: #ffffff;
 $color_black: #000000;
 
@@ -106,16 +107,16 @@ body {
 * {
 	@include reset;
 }
-.title {
-	@include titles;
-	display: flex;
-	text-align: left;
-	padding-top: 40px !important;
-	margin-left: -30px;
-}
+
 .info-content {
-	color: $color_blue;
-	margin-left: -40px;
+	margin-left: -70px;
+	h1 {
+		@include titles;
+		display: flex;
+		justify-content: center;
+		padding-top: 40px !important;
+	}
+
 	p {
 		@include text;
 		text-align: left;
@@ -133,7 +134,7 @@ body {
 	align-items: center;
 
 	img {
-		width: 700px;
+		width: 650px;
 		margin-right: 10px;
 		margin-left: 30px;
 	}
@@ -144,21 +145,23 @@ body {
 	margin-left: 50px;
 	margin-top: 40px;
 	background-color: $color_orange;
-	color: $white;
+	color: $color_white;
 	border: none;
 	border-radius: 20px;
 	cursor: pointer;
 
 	&:hover {
-		background-color: $color_bondi_blue_approx;
-		color: $white;
+		background-color: $color_vivorange;
+		color: $color_white;
 		box-shadow: none;
 	}
 }
 #foot {
 	bottom: 0 !important;
 }
+
 //Portfolio design
+
 .work {
 	@include titles;
 	text-align: center;
@@ -172,7 +175,7 @@ body {
 	margin-bottom: 30px !important;
 }
 #gallery img {
-	box-shadow: 0 8px 10px -4px $black_60 !important;
+	box-shadow: 0 8px 10px -4px $color_black !important;
 	border-radius: 10px !important;
 	margin-bottom: 20px !important;
 
@@ -182,7 +185,9 @@ body {
 		transform: scale(1.06);
 	}
 }
+
 //Form design
+
 .cntct {
 	@include titles;
 	text-align: center;
@@ -243,12 +248,12 @@ $medias: (
 			margin-top: 20px !important;
 			margin-left: 31px;
 			text-align: center;
-			font-size: $title !important;
+			font-size: $title_1 !important;
 			padding: 0;
 
 			p {
 				text-align: center;
-				font-size: $text !important;
+				font-size: $text_1 !important;
 				padding: 0;
 				padding-top: 24px !important;
 				color: $color_blue !important;
@@ -266,15 +271,15 @@ $medias: (
 		border-radius: 20px !important;
 
 		&:hover {
-			background-color: $color_bondi_blue_approx !important;
-			color: $white;
+			background-color: $color_vivorange !important;
+			color: $color_white;
 			box-shadow: none;
 		}
 	}
 	//Portfolio section
 
 	.work {
-		font-size: $title;
+		font-size: $title_2;
 		text-align: center;
 		color: $color_orange !important;
 		padding: 10px;
@@ -283,14 +288,14 @@ $medias: (
 
 	.desc {
 		text-align: left;
-		font-size: $text;
+		font-size: $text_2;
 		color: $color_blue !important;
 		padding: 10px;
 		margin-bottom: 15px;
 	}
 
 	.cntct {
-		font-size: $title;
+		font-size: $title_2;
 		text-align: center;
 		color: $color_orange !important;
 		padding: 10px;
@@ -328,7 +333,7 @@ $medias: (
 
 	.description p {
 		text-align: left;
-		font-size: $text;
+		font-size: $text_2;
 		color: $color_blue !important;
 		padding: 10px;
 		margin-bottom: 15px;
@@ -361,7 +366,7 @@ $medias: (
 
 		p {
 			text-align: center;
-			font-size: $text;
+			font-size: $text_2;
 			padding: 0;
 			padding-top: 20px !important;
 			color: $color_blue !important;
@@ -378,13 +383,13 @@ $medias: (
 		border-radius: 30px !important;
 
 		&:hover {
-			background-color: $color_bondi_blue_approx !important;
-			color: $white;
+			background-color: $color_vivorange !important;
+			color: $color_white;
 			box-shadow: none;
 		}
 	}
 	.work {
-		font-size: $title;
+		font-size: $title_2;
 		text-align: center;
 		color: $color_orange !important;
 		padding: 10px;
@@ -393,13 +398,13 @@ $medias: (
 
 	.desc {
 		text-align: left;
-		font-size: $text;
+		font-size: $text_2;
 		color: $color_blue !important;
 		padding: 10px;
 		margin-bottom: 15px;
 	}
 	#gallery img {
-		box-shadow: 0 8px 10px -4px $black_60 !important;
+		box-shadow: 0 8px 10px -4px $color_black !important;
 		border-radius: 10px !important;
 		margin-bottom: 20px !important;
 
@@ -450,7 +455,7 @@ $medias: (
 
 	.description p {
 		text-align: left;
-		font-size: $text;
+		font-size: $text_2;
 		color: $color_blue !important;
 		padding: 10px;
 		margin-bottom: 15px;

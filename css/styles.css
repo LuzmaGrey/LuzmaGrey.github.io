@@ -23,7 +23,6 @@
 }
 
 body {
-  overflow: hidden;
   background: url("https://storage.googleapis.com/subtlepatterns-production/designers/subtlepatterns/uploads/triangle-mosaic.png") repeat 0 0;
   -webkit-animation: bg-scrolling-reverse 0.92s infinite;
   animation: bg-scrolling-reverse 0.92s infinite;
@@ -40,12 +39,12 @@ body {
 }
 
 .info-content {
-  margin-left: -70px;
+  margin-left: -10px;
 }
 
 .info-content h1 {
-  color: #f14a16;
-  font-size: 2em;
+  color: #151515;
+  font-size: 2.3em;
   font-family: Montserrat, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,12 +52,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-weight: bold;
+  -webkit-text-stroke: .8px  #fbcb2b;
   padding-top: 40px !important;
 }
 
 .info-content p {
-  color: #0d6efd;
-  font-size: 0.5em;
+  color: #797373;
+  font-size: 1.1em;
   font-family: Montserrat, sans-serif;
   text-align: left;
   display: -webkit-box;
@@ -74,7 +75,7 @@ body {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
+  -ms-grid-columns: (1fr , 2);
       grid-template-columns: repeat(2, 1fr);
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -82,17 +83,18 @@ body {
 }
 
 .main img {
-  width: 650px;
+  width: 550px;
   margin-right: 10px;
   margin-left: 30px;
+  margin-top: 40px;
 }
 
 .downloadcv {
   padding: 12px 22px;
   margin-top: 12px;
   margin-left: 50px;
-  margin-top: 40px;
-  background-color: #f14a16;
+  margin-top: 30px;
+  background-color: #151515;
   color: #ffffff;
   border: none;
   border-radius: 20px;
@@ -100,7 +102,7 @@ body {
 }
 
 .downloadcv:hover {
-  background-color: #ff9407;
+  background-color: #B6C11D;
   color: #ffffff;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -111,17 +113,19 @@ body {
 }
 
 .work {
-  color: #f14a16;
-  font-size: 2em;
+  color: #151515;
+  font-size: 2.3em;
   font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  -webkit-text-stroke: .8px  #fbcb2b;
   text-align: center;
   padding: 10px;
   margin: 10px;
 }
 
 .desc {
-  color: #0d6efd;
-  font-size: 0.5em;
+  color: #797373;
+  font-size: 1.1em;
   font-family: Montserrat, sans-serif;
   text-align: left;
   padding: 10px;
@@ -144,9 +148,11 @@ body {
 }
 
 .cntct {
-  color: #f14a16;
-  font-size: 2em;
+  color: #151515;
+  font-size: 2.3em;
   font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  -webkit-text-stroke: .8px  #fbcb2b;
   text-align: center;
   padding: 10px;
   padding-top: 30px;
@@ -155,8 +161,8 @@ body {
 }
 
 .description {
-  color: #0d6efd;
-  font-size: 0.5em;
+  color: #797373;
+  font-size: 1.1em;
   font-family: Montserrat, sans-serif;
   text-align: left;
   margin: 14px;
@@ -172,12 +178,13 @@ form {
 }
 
 #allform label {
-  color: #f14a16 !important;
+  color: #151515 !important;
 }
 
 #copy {
   list-style: none;
   text-decoration: none;
+  color: black;
 }
 
 @media (max-width: 768px) {
@@ -214,18 +221,18 @@ form {
     width: 100%;
   }
   .info-content h1 {
-    color: #f14a16 !important;
+    color: #151515 !important;
     margin-top: 40px !important;
     margin-left: 31px;
     text-align: center;
-    font-size: 2em !important;
+    font-size: 2.3em !important;
     padding: 0;
   }
   .info-content h1 p {
     text-align: center;
-    font-size: 0.5em !important;
+    font-size: 1.1em !important;
     padding-top: 40px !important;
-    color: #0d6efd !important;
+    color: #797373 !important;
   }
   .title {
     padding-top: 50px !important;
@@ -235,33 +242,33 @@ form {
         -ms-flex-pack: center !important;
             justify-content: center !important;
     margin: 10px;
-    background-color: #f14a16 !important;
+    background-color: #151515 !important;
     border-radius: 20px !important;
   }
   .downloadcv:hover {
-    background-color: #ff9407 !important;
+    background-color: #B6C11D !important;
     color: #ffffff;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
   .work {
-    font-size: 1em;
+    font-size: 2em;
     text-align: center;
-    color: #f14a16 !important;
+    color: #151515 !important;
     padding: 10px;
     margin: 10px;
   }
   .desc {
     text-align: left;
     font-size: 1em;
-    color: #0d6efd !important;
+    color: #797373 !important;
     padding: 10px;
     margin-bottom: 15px;
   }
   .cntct {
-    font-size: 1em;
+    font-size: 2em;
     text-align: center;
-    color: #f14a16 !important;
+    color: #151515 !important;
     padding: 10px;
     margin: 10px;
     padding-top: 30px !important;
@@ -277,7 +284,7 @@ form {
     margin-left: 10px !important;
   }
   #allform label {
-    color: #f14a16 !important;
+    color: #151515 !important;
   }
   #copy {
     list-style: none;
@@ -290,7 +297,7 @@ form {
   .description p {
     text-align: left;
     font-size: 1em;
-    color: #0d6efd !important;
+    color: #797373 !important;
     padding: 10px;
     margin-bottom: 15px;
   }
@@ -343,7 +350,7 @@ form {
     padding-top: 30px !important;
     padding-bottom: 30px;
     padding-left: 40px;
-    color: #0d6efd !important;
+    color: #797373 !important;
   }
   .title {
     padding-top: 50px !important;
@@ -353,26 +360,26 @@ form {
         -ms-flex-pack: center !important;
             justify-content: center !important;
     margin: 10px;
-    background-color: #f14a16 !important;
+    background-color: #151515 !important;
     border-radius: 30px !important;
   }
   .downloadcv:hover {
-    background-color: #ff9407 !important;
+    background-color: #B6C11D !important;
     color: #ffffff;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
   .work {
-    font-size: 1em;
+    font-size: 2em;
     text-align: center;
-    color: #f14a16 !important;
+    color: #151515 !important;
     padding: 10px;
     margin: 10px;
   }
   .desc {
     text-align: left;
     font-size: 1em;
-    color: #0d6efd !important;
+    color: #797373 !important;
     padding: 10px;
     margin-bottom: 15px;
   }
@@ -400,12 +407,12 @@ form {
     margin-left: 10px !important;
   }
   #allform label {
-    color: #f14a16 !important;
+    color: #151515 !important;
   }
   .cntct {
     font-size: 1.8em;
     text-align: center;
-    color: #f14a16 !important;
+    color: #151515 !important;
     padding: 10px;
     margin: 10px;
     padding-top: 30px !important;
@@ -413,7 +420,7 @@ form {
   #copy {
     list-style: none;
     text-decoration: none;
-    color: #0d6efd;
+    color: #797373;
   }
   .pictsd img {
     width: 400px !important;
@@ -422,7 +429,7 @@ form {
   .description p {
     text-align: left;
     font-size: 1em;
-    color: #0d6efd !important;
+    color: #797373 !important;
     padding: 10px;
     margin-bottom: 15px;
   }

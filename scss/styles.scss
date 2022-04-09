@@ -1,7 +1,7 @@
 //Colors
-$color_blue: #0d6efd;
-$color_orange: #f14a16;
-$color_vivorange: #ff9407;
+$color_blue: #797373;
+$color_orange: #151515;
+$color_vivorange: #B6C11D;
 $color_white: #ffffff;
 $color_black: #000000;
 
@@ -10,9 +10,10 @@ $font_0: Montserrat;
 $font_1: sans-serif;
 
 //Font_sizes
-$title_1: 2em;
-$title_2: 1em;
-$text_1: .5em;
+$title_1: 2.3em;
+$title_2: 2em;
+//Queries
+$text_1: 1.1em;
 $text_2: 1em;
 $icon: 20px;
 
@@ -73,7 +74,6 @@ $bg-height: 50px;
 }
 body {
 	//img size is 50x50
-	overflow: hidden;
 	background: url($bg-url) repeat 0 0;
 	-webkit-animation: bg-scrolling-reverse 0.92s infinite;
 	-moz-animation: bg-scrolling-reverse 0.92s infinite;
@@ -110,11 +110,13 @@ body {
 }
 
 .info-content {
-	margin-left: -70px;
+	margin-left: -10px;
 	h1 {
 		@include titles;
 		display: flex;
 		justify-content: center;
+		font-weight: bold;
+		-webkit-text-stroke: .8px  #fbcb2b;
 		padding-top: 40px !important;
 	}
 
@@ -135,16 +137,18 @@ body {
 	align-items: center;
 
 	img {
-		width: 650px;
+		width: 550px;
 		margin-right: 10px;
 		margin-left: 30px;
+		margin-top: 40px;
+
 	}
 }
 .downloadcv {
 	padding: 12px 22px;
 	margin-top: 12px;
 	margin-left: 50px;
-	margin-top: 40px;
+	margin-top: 30px;
 	background-color: $color_orange;
 	color: $color_white;
 	border: none;
@@ -217,6 +221,7 @@ form {
 #copy {
 	list-style: none;
 	text-decoration: none;
+	color: black;
 }
 
 //Map's

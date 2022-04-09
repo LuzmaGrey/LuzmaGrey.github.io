@@ -1,7 +1,7 @@
 //Colors
 $color_blue: #797373;
 $color_orange: #151515;
-$color_vivorange: #B6C11D;
+$color_vivorange: #fbcb2b ;
 $color_white: #ffffff;
 $color_black: #000000;
 
@@ -157,14 +157,16 @@ body {
 
 	&:hover {
 		background-color: $color_vivorange;
-		color: $color_white;
+		color: $color_black;
 		box-shadow: none;
 	}
 }
 #foot {
 	bottom: 0 !important;
 }
-
+div.container-fluid{
+	padding-right: 0px;
+ }
 //Portfolio design
 
 .work {

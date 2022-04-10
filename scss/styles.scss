@@ -127,8 +127,8 @@ body {
 		@include text;
 		text-align: left;
 		display: flex;
-		padding: 30px;
-		margin-left: 23px;
+		padding: 20px;
+		margin-left: 18px;
 	}
 }
 
@@ -143,7 +143,7 @@ body {
 	img {
 		width: 550px;
 		margin-right: 10px;
-		margin-left: 30px;
+		margin-left: 40px;
 		margin-top: 40px;
 	}
 }
@@ -175,6 +175,7 @@ body {
 .work {
 	@include titles;
 	text-align: center;
+	font-weight: bold;
 	padding: 10px;
 	margin: 10px;
 }
@@ -203,6 +204,7 @@ body {
 .cntct {
 	@include titles;
 	text-align: center;
+	font-weight: bold;
 	padding: 10px;
 	margin: 10px;
 }
@@ -222,6 +224,17 @@ form {
 
 	label {
 		color: $color_orange !important;
+	}
+}
+#btn button {
+	border-radius: 17px !important;
+	text-decoration: none !important;
+	margin-top: 30px;
+
+	&:hover {
+		background-color: $color_vivorange !important;
+		color: $color_black;
+		box-shadow: none;
 	}
 }
 

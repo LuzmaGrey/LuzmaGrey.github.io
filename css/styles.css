@@ -64,8 +64,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 30px;
-  margin-left: 23px;
+  padding: 20px;
+  margin-left: 18px;
 }
 
 .main {
@@ -84,7 +84,7 @@ body {
 .main img {
   width: 550px;
   margin-right: 10px;
-  margin-left: 30px;
+  margin-left: 40px;
   margin-top: 40px;
 }
 
@@ -116,6 +116,7 @@ body {
   font-size: 2.3em;
   font-family: Montserrat, sans-serif;
   text-align: center;
+  font-weight: bold;
   padding: 10px;
   margin: 10px;
 }
@@ -149,6 +150,7 @@ body {
   font-size: 2.3em;
   font-family: Montserrat, sans-serif;
   text-align: center;
+  font-weight: bold;
   padding: 10px;
   margin: 10px;
 }
@@ -171,6 +173,19 @@ form {
 
 #allform label {
   color: #151515 !important;
+}
+
+#btn button {
+  border-radius: 17px !important;
+  text-decoration: none !important;
+  margin-top: 30px;
+}
+
+#btn button:hover {
+  background-color: #fbcb2b !important;
+  color: #000000;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #copy {

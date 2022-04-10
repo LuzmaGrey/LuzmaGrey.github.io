@@ -1,7 +1,7 @@
 //Colors
-$color_blue: #797373;
+$color_blue: #6f6c6c;
 $color_orange: #151515;
-$color_vivorange: #fbcb2b ;
+$color_vivorange: #fbcb2b;
 $color_white: #ffffff;
 $color_black: #000000;
 
@@ -164,9 +164,7 @@ body {
 #foot {
 	bottom: 0 !important;
 }
-div.container-fluid{
-	padding-right: 0px;
- }
+
 //Portfolio design
 
 .work {
@@ -238,19 +236,25 @@ $medias: (
 //Media Queries
 
 @media (max-width: 768px) {
+
 	.main {
 		justify-content: map-get($medias, justify-content);
 		align-items: map-get($medias, align-items);
 		display: map-get($medias, display);
 		flex-direction: map-get($medias, flex-direction);
-		width: map-get($medias, width);
+
+		img {
+			width: 550px;
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 40px;
+		}
 	}
 	.info-content {
 		justify-content: map-get($medias, justify-content);
 		align-items: map-get($medias, align-items);
 		display: map-get($medias, display);
 		flex-direction: map-get($medias, flex-direction);
-		width: map-get($medias, width);
 		h1 {
 			color: $color_orange !important;
 			margin-top: 40px !important;
@@ -334,6 +338,9 @@ $medias: (
 	}
 
 	.pictsd img {
+		display: block !important;
+		max-width: 350px !important;
+		max-height: 350px !important;
 		width: auto !important;
 		height: auto !important;
 	}
@@ -374,11 +381,11 @@ $medias: (
 		p {
 			text-align: center;
 			font-size: $text_2;
-			padding: 0;
-			padding-top: 30px !important;
-			padding-bottom: 30px;
-			padding-left: 40px;
-			color: $color_blue !important;
+			margin: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 40px !important;
+			padding-bottom: 40px;
 		}
 	}
 	.title {
@@ -389,7 +396,7 @@ $medias: (
 		justify-content: center !important;
 		margin: 10px;
 		background-color: $color_orange !important;
-		border-radius: 30px !important;
+		border-radius: 20px !important;
 
 		&:hover {
 			background-color: $color_vivorange !important;
@@ -426,29 +433,21 @@ $medias: (
 
 	//form section
 
-	.formulario {
-		font-family: inherit;
-		width: 104%;
-		border-radius: 30px !important;
-		padding: 1em;
-		margin: auto;
-	}
-
 	#allform {
 		margin-left: 10px !important;
+		margin: 0;
+		padding: 0;
 
 		label {
 			color: $color_orange !important;
+			margin: 0 !important;
+			padding: 0 !important;
 		}
 	}
 
 	.cntct {
 		font-size: 1.8em;
 		text-align: center;
-		color: $color_orange !important;
-		padding: 10px;
-		margin: 10px;
-		padding-top: 30px !important;
 	}
 
 	#copy {

@@ -1,5 +1,5 @@
 //Colors
-$color_blue: #6f6c6c;
+$color_blue: #797373;
 $color_orange: #151515;
 $color_vivorange: #fbcb2b;
 $color_white: #ffffff;
@@ -72,6 +72,7 @@ $bg-height: 50px;
 		background-position: $bg-width $bg-height;
 	}
 }
+
 body {
 	//img size is 50x50
 	background: url($bg-url) repeat 0 0;
@@ -92,11 +93,13 @@ body {
 	box-sizing: border-box;
 	font-family: $font_0, $font_1;
 }
+
 @mixin titles {
 	color: $color_orange;
 	font-size: $title_1;
 	font-family: $font_0, $font_1;
 }
+
 @mixin text {
 	color: $color_blue;
 	font-size: $text_1;
@@ -111,12 +114,13 @@ body {
 
 .info-content {
 	margin-left: -10px;
+
 	h1 {
 		@include titles;
 		display: flex;
 		justify-content: center;
 		font-weight: bold;
-		-webkit-text-stroke: .5px  #fbcb2b;
+		-webkit-text-stroke: 0.5px #fbcb2b;
 		padding-top: 40px !important;
 	}
 
@@ -128,6 +132,7 @@ body {
 		margin-left: 23px;
 	}
 }
+
 .main {
 	width: 80vw;
 	height: 80vh;
@@ -141,9 +146,9 @@ body {
 		margin-right: 10px;
 		margin-left: 30px;
 		margin-top: 40px;
-
 	}
 }
+
 .downloadcv {
 	padding: 12px 22px;
 	margin-top: 12px;
@@ -161,6 +166,7 @@ body {
 		box-shadow: none;
 	}
 }
+
 #foot {
 	bottom: 0 !important;
 }
@@ -173,12 +179,14 @@ body {
 	padding: 10px;
 	margin: 10px;
 }
+
 .desc {
 	@include text;
 	text-align: left;
 	padding: 10px;
 	margin-bottom: 30px !important;
 }
+
 #gallery img {
 	box-shadow: 0 8px 10px -4px $color_black !important;
 	border-radius: 10px !important;
@@ -201,14 +209,17 @@ body {
 	padding-bottom: 15px;
 	margin: 10px;
 }
+
 .description {
 	@include text;
 	text-align: left;
 	margin: 14px;
 }
+
 form {
 	margin: 30px;
 }
+
 #allform {
 	margin-left: 10px !important;
 	margin-bottom: 90px !important;
@@ -225,18 +236,15 @@ form {
 }
 
 //Map's
-$medias: (
-	justify-content: center,
+$medias: (justify-content: center,
 	align-items: center,
 	display: flex,
 	flex-direction: column,
-	width: 100%,
 );
 
 //Media Queries
 
 @media (max-width: 768px) {
-
 	.main {
 		justify-content: map-get($medias, justify-content);
 		align-items: map-get($medias, align-items);
@@ -250,11 +258,13 @@ $medias: (
 			margin-top: 40px;
 		}
 	}
+
 	.info-content {
 		justify-content: map-get($medias, justify-content);
 		align-items: map-get($medias, align-items);
 		display: map-get($medias, display);
 		flex-direction: map-get($medias, flex-direction);
+
 		h1 {
 			color: $color_orange !important;
 			margin-top: 40px !important;
@@ -271,6 +281,7 @@ $medias: (
 			}
 		}
 	}
+
 	.title {
 		padding-top: 50px !important;
 	}
@@ -287,6 +298,7 @@ $medias: (
 			box-shadow: none;
 		}
 	}
+
 	//Portfolio section
 
 	.work {
@@ -388,6 +400,7 @@ $medias: (
 			padding-bottom: 40px;
 		}
 	}
+
 	.title {
 		padding-top: 50px !important;
 	}
@@ -400,10 +413,11 @@ $medias: (
 
 		&:hover {
 			background-color: $color_vivorange !important;
-			color: $color_white;
+			color: $color_black;
 			box-shadow: none;
 		}
 	}
+
 	.work {
 		font-size: $title_2;
 		text-align: center;
@@ -419,9 +433,10 @@ $medias: (
 		padding: 10px;
 		margin-bottom: 15px;
 	}
+
 	#gallery img {
 		box-shadow: 0 8px 10px -4px $color_black !important;
-		border-radius: 10px !important;
+		border-radius: 11px !important;
 		margin-bottom: 20px !important;
 
 		&:hover {
